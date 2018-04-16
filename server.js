@@ -8,6 +8,7 @@ let app = express ();
 app.use("/css", express.static(path.resolve(__dirname + "/css")));
 app.use("/html", express.static(path.resolve(__dirname + "/html")));
 app.use("/js", express.static(path.resolve(__dirname + "/js")));
+app.use("/img", express.static(path.resolve(__dirname + "/img")));
 
 // Sends the Main HTML Pages
 app.get("/", function (req, res) {
