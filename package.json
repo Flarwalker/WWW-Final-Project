@@ -1,0 +1,32 @@
+{
+  "name": "www-final-project",
+  "version": "1.0.0",
+  "description": "A website for a made up amusment park",
+  "main": "sever.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flarwalker/MERJMirrorPi.git"
+  },
+  "keywords": [
+    "html",
+    "nodejs",
+    "js",
+    "css"
+  ],
+  "author": "Ryan Cross, Erin Gauthier, Alek Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flarwalker/MERJMirrorPi/issues"
+  },
+  "homepage": "https://github.com/Flarwalker/MERJMirrorPi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.17.3",
+    "path": "^0.12.7"
+  }
+}
