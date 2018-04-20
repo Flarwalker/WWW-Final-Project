@@ -1,9 +1,27 @@
 <html>
   <head>
     <title>Tickets</title>
+    <script src="..\js\tickets.js"></script>
   </head>
 
-  <body>
-dfasfffffffffffffffff
+  <body onload = "setBuy()">
+    <div id="tickets">
+      <h3>Thanks for buying tickets!!!!!!!</h3>
+      <br />
+      <div>
+        <p>Review the Tickets that you bought.</p>
+        <pre>
+    Adult Tickets <span id="adultN"></span> at $<span id="adultP"></span> for a total of $<span id="adultT"></span>.
+    Senior Tickets <span id="seniorN"></span> at $<span id="seniorP"></span> for a total of $<span id="seniorT"></span>.
+    Children Tickets <span id="childN"></span> at $<span id="childP"></span> for a total of $<span id="childT"></span>.
+    Season Passes <span id="passN"></span> at $<span id="passP"></span> for a total of $<span id="passT"></span>.
+        </pre>
+        <pre>
+    Your Total Purchase was $<span id="total"></span>.
+        </pre>
+      </div>
+    </div>
+
   </body>
+
 </html>
