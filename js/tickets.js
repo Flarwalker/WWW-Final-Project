@@ -4,10 +4,39 @@ window.onload = function () {
   childP = 35;
   passP = 300;
 
-  document.getElementById("adultP").innerHTML = 45;
-  document.getElementById("seniorP").innerHTML = 35;
-  document.getElementById("childP").innerHTML = 35;
-  document.getElementById("passP").innerHTML = 300;
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+
+  if (page == "buy.html") {
+    var adult  = localStorage.getItem("adults");
+    var senior = localStorage.getItem("seniors");
+    var child  = localStorage.getItem("children");
+    var pass   = localStorage.getItem("passes");
+
+    document.getElementById("adultN").innerHTML = adult;
+    document.getElementById("adultP").innerHTML = 45;
+    document.getElementById("adultT").innerHTML = 45 * adult;
+
+    document.getElementById("seniorN").innerHTML = senior;
+    document.getElementById("seniorP").innerHTML = 35;
+    document.getElementById("seniorT").innerHTML = 35 * senior;
+
+    document.getElementById("childN").innerHTML = child;
+    document.getElementById("childP").innerHTML = 35;
+    document.getElementById("childT").innerHTML = 35 * child;
+
+    document.getElementById("passN").innerHTML = pass;
+    document.getElementById("passP").innerHTML = 300;
+    document.getElementById("passT").innerHTML = 300 * pass;
+
+    document.getElementById("total").innerHTML = (adult * 45) + (senior * 35) + (child * 35) + (pass * 300);
+  } else {
+    document.getElementById("adultP").innerHTML = 45;
+    document.getElementById("seniorP").innerHTML = 35;
+    document.getElementById("childP").innerHTML = 35;
+    document.getElementById("passP").innerHTML = 300;
+  }
+
 };
 
 function buy () {
@@ -26,29 +55,4 @@ function buy () {
   }
 
   window.location.href = 'buy.html';
-}
-
-function setBuy () {
-  var adult  = localStorage.getItem("adults");
-  var senior = localStorage.getItem("seniors");
-  var child  = localStorage.getItem("children");
-  var pass   = localStorage.getItem("passes");
-
-  document.getElementById("adultN").innerHTML = adult;
-  document.getElementById("adultP").innerHTML = 45;
-  document.getElementById("adultT").innerHTML = 45 * adult;
-
-  document.getElementById("seniorN").innerHTML = senior;
-  document.getElementById("seniorP").innerHTML = 35;
-  document.getElementById("seniorT").innerHTML = 35 * senior;
-
-  document.getElementById("childN").innerHTML = child;
-  document.getElementById("childP").innerHTML = 35;
-  document.getElementById("childT").innerHTML = 35 * child;
-
-  document.getElementById("passN").innerHTML = pass;
-  document.getElementById("passP").innerHTML = 300;
-  document.getElementById("passT").innerHTML = 300 * pass;
-
-  document.getElementById("total").innerHTML = (adult * 45) + (senior * 35) + (child * 35) + (pass * 300);
 }
