@@ -1,5 +1,3 @@
-// Empty JS for your own code to be here
-
 var modal = document.querySelector('.modal');
 var closeBtn = document.querySelector('.closeBtn');
 var i1 = document.querySelector('#img1');
