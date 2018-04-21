@@ -12,7 +12,7 @@ app.use("/img", express.static(path.resolve(__dirname + "/img")));
 
 // Sends the Main HTML Pages
 app.get("/", function (req, res) {
-   res.send(fs.readFileSync(path.resolve(__dirname + "/home.html"), {encoding: "utf8"}));
+   res.send(fs.readFileSync(path.resolve(__dirname + "/html/home.html"), {encoding: "utf8"}));
 });
 
 // Sets node js to listen to port 8080.
