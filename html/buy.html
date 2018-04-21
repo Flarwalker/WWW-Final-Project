@@ -1,27 +1,61 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tickets</title>
-    <script src="..\js\tickets.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="..\css\main.css">
   </head>
 
-  <body onload = "setBuy()">
-    <div id="tickets">
-      <h3>Thanks for buying tickets!!!!!!!</h3>
-      <br />
-      <div>
-        <p>Review the Tickets that you bought.</p>
-        <pre>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+            <!-- Brand -->
+            <a class="navbar-brand" href="\html\home.html">Midwest Land</a>
+
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="\html\tickets.html">Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="\html\attractions.html">Attractions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="\html\directions.html">Directions</a>
+              </li>
+            </ul>
+            <a target="_blank" href="http://www.booked.net/weather/toledo-4547" id="weather"><img src="https://w.bookcdn.com/weather/picture/26_4547_0_1_95a5a6_250_7f8c8d_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=42907"  alt="booked.net"/></a>
+          </nav>
+        </div>
+      </div>
+      <br>
+      <div class="row" id="margin">
+        <div class="col-md-6" id="opaque">
+          <h3>Thanks for buying tickets!!!!!!!</h3>
+          <br />
+          <div>
+            <p>Review the Tickets that you bought.</p>
+            <pre>
     Adult Tickets <span id="adultN"></span> at $<span id="adultP"></span> for a total of $<span id="adultT"></span>.
     Senior Tickets <span id="seniorN"></span> at $<span id="seniorP"></span> for a total of $<span id="seniorT"></span>.
     Children Tickets <span id="childN"></span> at $<span id="childP"></span> for a total of $<span id="childT"></span>.
     Season Passes <span id="passN"></span> at $<span id="passP"></span> for a total of $<span id="passT"></span>.
-        </pre>
-        <pre>
+            </pre>
+            <pre>
     Your Total Purchase was $<span id="total"></span>.
-        </pre>
+            </pre>
+          </div>
+        </div>
       </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="..\js\tickets.js"></script>
   </body>
-
 </html>
+
