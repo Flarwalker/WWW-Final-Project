@@ -1,94 +1,131 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tickets</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="..\css\main.css">
   </head>
 
   <body>
-    <div>
-      <h3>Come Vist Us!!</h3>
-      <h4>
-        Buy your tickets here!!!!
-        <br />
-        Select the number of tickets for each type that you want.
-      </h4>
-      <br />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+            <!-- Brand -->
+            <a class="navbar-brand" href="..\home.html">Midwest Land</a>
 
-      <div id="adult">
-        Adult Tickets $<span id="adultP"></span> per Person:
-        <select id="adults">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="\html\tickets.html">Tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="\html\attractions.html">Attractions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="\html\directions.html">Directions</a>
+              </li>
+            </ul>
+            <a target="_blank" href="http://www.booked.net/weather/toledo-4547" id="weather"><img src="https://w.bookcdn.com/weather/picture/26_4547_0_1_95a5a6_250_7f8c8d_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=42907"  alt="booked.net"/></a>
+          </nav>
+        </div>
       </div>
+      <br>
+      <div class="row" id="margin">
+        <div class="col-md-6" id="opaque">
+          <h3>Come Vist Us!!</h3>
+          <h4>
+            Buy your tickets here!!!!
+            <br />
+            Select the number of tickets for each type that you want.
+          </h4>
+          <br />
 
-      <div id="senior">
-        Senior Tickets $<span id="seniorP"></span> per Person:
-        <select id="seniors">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+          <div id="adult">
+            Adult Tickets $<span id="adultP"></span> per Person:
+            <select id="adults">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div id="senior">
+            Senior Tickets $<span id="seniorP"></span> per Person:
+            <select id="seniors">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div id="child">
+            Children 5+ Tickets $<span id="childP"></span> per Person:
+            <select id="childrens">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div id="infants">
+            Children 4- are Free!!
+          </div>
+
+          <br />
+          <br />
+
+          <div id="pass">
+            Season Passes are $<span id="passP"></span> per Pass:
+            <select id="passes">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <br />
+
+          <button onclick="buy()" class="btn btn-success"4>Buy Tickets</button>
+          <br />
+          <br />
+        </div>
       </div>
-
-      <div id="child">
-        Children 5+ Tickets $<span id="childP"></span> per Person:
-        <select id="childrens">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
-
-      <div id="infants">
-        Children 4- are Free!!
-      </div>
-
-      <br />
-      <br />
-
-      <div id="pass">
-        Season Passes are $<span id="passP"></span> per Pass:
-        <select id="passes">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
-
-      <br />
-
-      <button onclick="buy()">Buy Tickets</button>
-
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="..\js\tickets.js"></script>
   </body>
 </html>
