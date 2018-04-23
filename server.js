@@ -19,10 +19,14 @@ conn.connect (function (err) {
   console.log("Connected");
 });
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use("/css", express.static(path.resolve(__dirname + "/css")));
 app.use("/html", express.static(path.resolve(__dirname + "/html")));
 app.use("/js", express.static(path.resolve(__dirname + "/js")));
 app.use("/img", express.static(path.resolve(__dirname + "/img")));
+app.use("/json", express.static(path.resolve(__dirname + "/json")));
 
 app.get("/prices", function (req, res) {
   conn.query("SELECT price FROM tickets", function (err, result) {
@@ -52,6 +56,10 @@ app.get("/login", function (req, res) {
       res.send(login);
     }
   });
+});
+
+app.get("/attractions", function (req, res) {
+  res.send(JSON.parse(fs.readFileSync('\json\attractions.json', 'utf8')));
 });
 
 // Sends the Main HTML Pages
