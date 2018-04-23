@@ -40,6 +40,11 @@ body {
   text-align: left;
 }
 
+#padding {
+  margin-right: 15px;
+  padding-right: 15px;
+}
+
 .child {
   position: relative;
   left: 50%;
