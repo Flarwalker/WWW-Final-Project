@@ -40,6 +40,20 @@ app.get("/prices", function (req, res) {
   });
 });
 
+app.get("/login", function (req, res) {
+  conn.query("SELECT * FROM login", function (err, result) {
+    if (err) {
+      throw err;
+    } else {
+      var login = {};
+      login.user = result[0].username;
+      login.password = result[0].password;
+
+      res.send(login);
+    }
+  });
+});
+
 // Sends the Main HTML Pages
 app.get("/", function (req, res) {
    res.send(fs.readFileSync(path.resolve(__dirname + "/html/home.html"), {encoding: "utf8"}));
