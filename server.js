@@ -58,6 +58,10 @@ app.get("/login", function (req, res) {
   });
 });
 
+app.get("/attractions", function (req, res) {
+  res.send(JSON.parse(fs.readFileSync('\json\attractions.json', 'utf8')));
+});
+
 // Sends the Main HTML Pages
 app.get("/", function (req, res) {
    res.send(fs.readFileSync(path.resolve(__dirname + "/html/home.html"), {encoding: "utf8"}));
