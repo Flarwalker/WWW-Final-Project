@@ -5,11 +5,12 @@ function login () {
 
     if (user == ret.user) {
       if (pass == ret.password) {
-        document.getElementById("main").innerHTML = '<form><h4>Price of Adult Ticket: </h4><input type="text" id="adultP" name="adultP">' +
-                                                    '<br /><h4>Price of Senior Ricket: </h4><input type="text" id="seniorP" name="seniorP">' +
-                                                    '<br /><h4>Price of Child Ticket: </h4><input type="text" id="childP" name="childP"><br />' +
-                                                    '<h4>Price of a Season Pass: </h4><input type="text" id="passP" name="passP"> <br />' +
-                                                    '<br /><button type="button" onclick="save()">Save Changes</button><br /><br /></form>';
+        document.getElementById("main").innerHTML = '<form>' +
+                                                    '<div class="form-group"><label for="adultP" >Price of Adult Ticket: </label> <input type="text" id="adultP"  name="adultP"  class="form-control"></div>' +
+                                                    '<div class="form-group"><label for="seniorP">Price of Senior Ticket: </label><input type="text" id="seniorP" name="seniorP" class="form-control"></div>' +
+                                                    '<div class="form-group"><label for="childP" >Price of Child Ticket: </label> <input type="text" id="childP"  name="childP"  class="form-control"></div>' +
+                                                    '<div class="form-group"><label for="passP"  >Price of a Season Pass: </label><input type="text" id="passP"   name="passP"   class="form-control"></div>' +
+                                                    '<button type="button" onclick="save()" class="btn btn-secondary">Save Changes</button><br /><br /></form>';
         $.get("/prices", function (ret) {
           document.getElementById("adultP").value  = ret.adult;
           document.getElementById("seniorP").value = ret.senior;
