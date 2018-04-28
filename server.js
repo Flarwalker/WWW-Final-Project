@@ -58,6 +58,41 @@ app.get("/login", function (req, res) {
   });
 });
 
+app.post("/savePrices", function (req, res) {
+  var newPrices = req.body;
+  conn.query("UPDATE tickets SET price = " + newPrices.adult + " WHERE type = 'adult'", function (err, result) {
+    if (err) {
+      throw err;
+    } else {
+      console.log("Adult Updated");
+    }
+  });
+
+  conn.query("UPDATE tickets SET price = " + newPrices.senior + " WHERE type = 'senior'", function (err, result) {
+    if (err) {
+      throw err;
+    } else {
+      console.log("Senior Updated");
+    }
+  });
+
+  conn.query("UPDATE tickets SET price = " + newPrices.child + " WHERE type = 'child'", function (err, result) {
+    if (err) {
+      throw err;
+    } else {
+      console.log("Child Updated");
+    }
+  });
+
+  conn.query("UPDATE tickets SET price = " + newPrices.pass + " WHERE type = 'pass'", function (err, result) {
+    if (err) {
+      throw err;
+    } else {
+      console.log("Pass Updated");
+    }
+  });
+});
+
 app.get("/attractions", function (req, res) {
   res.send(JSON.parse(fs.readFileSync('\json\attractions.json', 'utf8')));
 });
