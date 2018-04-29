@@ -1,0 +1,46 @@
+{
+  "rides":[
+    {
+      "coaster":{
+        "name":"Mach 5",
+        "specs":["Height Requirement: 3'", "Max Height: 4'", "Top Speed: 88 mph", "Duration: 25 seconds"],
+        "health":["Riders must have the ability to scream (for the purpose of enjoyment)", "Riders with gout may not wish to ride this ride"]
+      }
+    },
+    {
+      "coaster":{
+        "name":"The \"Design Not Thought Through\" Coaster",
+        "specs":["Height Requirement: 5' 5\"", "Max Height: 70'", "Top Speed: 70 mph", "Duration: 3 minutes and 7 seconds"],
+        "health":["Those with a irrational free of free falling are advised not to ride this ride", "May cause asthma are at risk of having an asthma attack"]
+      }
+    },
+    {
+      "coaster":{
+        "name":"Death By Coaster",
+        "specs":["Height Requirement: None", "Max Height: 200'", "Top Speed: 90 mph", "Duration: 4 minutes, if you're lucky"],
+        "health":["None"]
+      }
+    },
+    {
+      "coaster":{
+        "name":"Coaster Of Imagination",
+        "specs":["Height Requirement: 5'7\"", "Max Height: 2' 5\"", "Top Speed: However fast the rider wishes", "Duration: However long the rider wishes"],
+        "health":["Riders with no sense of wonder are prohibited", "Riders with clausrophobia are prohibited", "If allergic to cardboard, this ride will cause a reaction"]
+      }
+    },
+    {
+      "coaster":{
+        "name":"Top Thrill Dragster",
+        "specs":["Height Requirement: 4' 9\"", "Max Height: 420'", "Top Speed: 120 mph", "Duration: 3.8 seconds"],
+        "health":["Riders with backproblems are advised not ride", "Riders who are prone to whiplash are advised not to ride"]
+      }
+    },
+    {
+      "coaster":{
+        "name":"The FUNnel",
+        "specs":["Height Requirement: 3'", "Max Height: 75'", "Top Speed: Varies", "Duration: ~1 minute"],
+        "health":["Riders who are hydrophobic are advised not to ride", "Max weight allowed is 300 lbs"]
+      }
+    }
+  ]
+}
