@@ -16,4 +16,24 @@ window.onload = function() {
       });
     }
   });
+  var wt1 = $.get('/waittime/88', function (t) {
+    document.getElementById('wt1').innerHTML = "Wait Time:" + t;
+  }).done(function () {setInterval(wt1, 1000)});
+  var wt2 = $.get('/waittime/90', function (t) {
+    document.getElementById('wt2').innerHTML = "Wait Time:" + t;
+  }).done(function () {setInterval(wt2, 1000)});
+  var wt3 = $.get('/waittime/78', function (t) {
+    document.getElementById('wt3').innerHTML = "Wait Time:" + t;
+  }).done(function () {setInterval(wt3, 1000)});
+  var wt4 = $.get('/waittime/63', function (t) {
+    document.getElementById('wt4').innerHTML = "Wait Time:" + t;
+  }).done(function() {setInterval(wt4, 1000)});
+  var wt5 = $.get('/waittime/55', function (t) {
+    document.getElementById('wt5').innerHTML = "Wait Time:" + t;
+  }).done(function() {setInterval(wt5, 1000)});
+  var wt6 = $.get('/waittime/120', function (t) {
+    document.getElementById('wt6').innerHTML = "Wait Time:" + t;
+  }).done(function () {setInterval(wt6, 1000)});
 }
+
+

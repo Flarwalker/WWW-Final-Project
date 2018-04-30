@@ -2,22 +2,22 @@ const express = require ("express");
 const bodyParser = require ("body-parser");
 const fs = require ("fs");
 const path = require ("path");
-const mysql = require ("mysql");
+//const mysql = require ("mysql");
 
 let app = express ();
 
-let conn = mysql.createConnection({
-  host: "localhost",
-  port: "3306",
-  user: "www",
-  password: "www",
-  database: "wwwproject"
-});
-
-conn.connect (function (err) {
-  if (err) throw err;
-  console.log("Connected");
-});
+//let conn = mysql.createConnection({
+//  host: "localhost",
+//  port: "3306",
+//  user: "www",
+//  password: "www",
+//  database: "wwwproject"
+//});
+//
+//conn.connect (function (err) {
+//  if (err) throw err;
+//  console.log("Connected");
+//});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -58,6 +58,11 @@ app.get("/login", function (req, res) {
   });
 });
 
+app.get("/waittime/:speed", function (req, res) {
+  var t = parseInt(req.params.speed);
+  var time = Math.round(5 * t/100)/100
+  res.sendStatus("" + time);
+});
 app.post("/savePrices", function (req, res) {
   var newPrices = req.body;
   conn.query("UPDATE tickets SET price = " + newPrices.adult + " WHERE type = 'adult'", function (err, result) {
